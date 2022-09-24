@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ProductViewModel>
+
+@{
+    <h1>Products</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in Model)
+        {
+                <tr>
+                    <th scope="row">@product.Id</th>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>
+                        <a class = "btn btn-primary" href="/Product/ById/@product.Id">Details</a>
+                    </td>
+                </tr>
+        }
+        </tbody>
+    </table>
+}
