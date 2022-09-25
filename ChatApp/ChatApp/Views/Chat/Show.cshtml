@@ -1,0 +1,50 @@
+﻿@model ChatViewModel
+@{
+    <h1>Messages</h1>
+    <div class="container">
+            <div class="row">
+                @if(Model.Messages != null)
+            {
+
+                    @foreach (var message in Model.Messages)
+                {
+                        <div class="col-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3>@message.Message</h3>
+                                    <p>@message.Sender</p>
+                                </div>
+                            </div>
+                        </div>
+                }
+            }
+            else
+            {
+                <p>No messages yet...</p>
+            }
+                </div>
+    </div>
+    <div>
+                <div class="card">
+                    <div class="card-body" style="background-color: lightgrey">
+                    <h2>Send a new message</h2>
+                        <form asp-controller="Chat" asp-action="Send" method="post">
+                        <div class="row">
+                                <div class="col-8">
+                                    <div class="input-group">
+                                        <textarea class="form-control" rows="5" asp-for="CurrentMessage.Message" aria-label="With textarea" placeholder="Message here..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" asp-for="CurrentMessage.Sender" placeholder=" Username" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+    </div>
+
+}
