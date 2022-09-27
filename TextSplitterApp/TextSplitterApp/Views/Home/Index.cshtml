@@ -1,0 +1,19 @@
+﻿@model TextViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="container">
+        <div class="card justify-content-center" style="width: 300px">
+            <div class="card-body">
+                <form asp-controller="Home" asp-action="Split" method="post">
+                    <input asp-for="@Model.Text" class="form-control" />
+                    <button class="btn btn-primary form-control" type="submit">Split</button>
+                    <textarea class="form-control" name="w3review" rows="4" cols="50">@Model.SplitText</textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
