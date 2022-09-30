@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimePlace", "AnimePlace\AnimePlace.csproj", "{96397ADF-CD18-49DB-9A88-CD0EB60B81CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimePlace.Core", "AnimePlace.Core\AnimePlace.Core.csproj", "{573D4D1A-BAC3-41CD-9C8A-8DECDBC31D2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96397ADF-CD18-49DB-9A88-CD0EB60B81CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96397ADF-CD18-49DB-9A88-CD0EB60B81CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96397ADF-CD18-49DB-9A88-CD0EB60B81CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96397ADF-CD18-49DB-9A88-CD0EB60B81CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573D4D1A-BAC3-41CD-9C8A-8DECDBC31D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573D4D1A-BAC3-41CD-9C8A-8DECDBC31D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573D4D1A-BAC3-41CD-9C8A-8DECDBC31D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573D4D1A-BAC3-41CD-9C8A-8DECDBC31D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79105417-CD72-4D29-94BF-2DD735AA47E4}
+	EndGlobalSection
+EndGlobal

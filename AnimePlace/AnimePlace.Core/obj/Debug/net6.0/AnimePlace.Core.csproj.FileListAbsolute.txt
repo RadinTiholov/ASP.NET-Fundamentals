@@ -1,0 +1,14 @@
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\bin\Debug\net6.0\AnimePlace.Core.deps.json
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\bin\Debug\net6.0\AnimePlace.Core.runtimeconfig.json
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\bin\Debug\net6.0\AnimePlace.Core.dll
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\bin\Debug\net6.0\AnimePlace.Core.pdb
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.csproj.AssemblyReference.cache
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.AssemblyInfoInputs.cache
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.AssemblyInfo.cs
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.csproj.CoreCompileInputs.cache
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.dll
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\refint\AnimePlace.Core.dll
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.pdb
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\AnimePlace.Core.genruntimeconfig.cache
+D:\SoftUni\ASP.NET Fundamentals\ASP.NET-Fundamentals\AnimePlace\AnimePlace.Core\obj\Debug\net6.0\ref\AnimePlace.Core.dll
