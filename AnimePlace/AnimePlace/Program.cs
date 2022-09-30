@@ -1,3 +1,5 @@
+using AnimePlace.Core.Contracts;
+using AnimePlace.Core.Services;
 using AnimePlace.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +15,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AnimePlaceDbContext>();
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IAnimeService, AnimeService>();
 
 var app = builder.Build();
 

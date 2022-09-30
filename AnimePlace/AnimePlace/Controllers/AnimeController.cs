@@ -4,6 +4,10 @@ namespace AnimePlace.Controllers
 {
     public class AnimeController: Controller
     {
-
+        [HttpGet]
+        public IActionResult All() 
+        {
+            return View();
+        }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using AnimePlace.Core.Contracts;
 using AnimePlace.Core.Models;
+using AnimePlace.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +12,23 @@ namespace AnimePlace.Core.Services
 {
     public class AnimeService : IAnimeService
     {
-        public Task<IEnumerable<Anime>> GetAll()
+        private readonly AnimePlaceDbContext context;
+        public AnimeService(AnimePlaceDbContext context)
         {
-            throw new NotImplementedException();
+            this.context = context;
+        }
+        public IEnumerable<Anime> GetAll()
+        {
+            context.Database.EnsureCreated();
+            var animes = context.Animes.Select(x => new Anime
+            {
+                Id = x.Id,
+                Title = x.Title,
+                Description = x.Description,
+                Trailer = x.Trailer
+            }).ToList();
+
+            return animes;
         }
     }
 }
