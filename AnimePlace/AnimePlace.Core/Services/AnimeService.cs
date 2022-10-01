@@ -24,7 +24,8 @@ namespace AnimePlace.Core.Services
                 Id = x.Id,
                 Title = x.Title,
                 Description = x.Description,
-                Trailer = x.Trailer
+                Trailer = x.Trailer,
+                Image = x.Image
             }).ToListAsync();
 
             return animes;

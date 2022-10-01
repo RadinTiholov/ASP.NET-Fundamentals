@@ -21,5 +21,8 @@ namespace AnimePlace.Core.Models
 
         [Required]
         public string Trailer { get; set; }
+
+        [Required]
+        public string Image { get; set; }
     }
 }
