@@ -43,5 +43,19 @@ namespace AnimePlace.Core.Services
             var anime = await context.Animes.FirstOrDefaultAsync(x => x.Id.ToString() == id);
             return anime;
         }
+
+        public async Task<Anime> Edit(Anime anime)
+        {
+            var foundAnime = await context.Animes.FirstOrDefaultAsync(x => x.Id.ToString() == anime.Id.ToString());
+            if (foundAnime != null) 
+            {
+                foundAnime.Title = anime.Title;
+                foundAnime.Description = anime.Description;
+                foundAnime.Image = anime.Image;
+                foundAnime.Trailer = anime.Trailer;
+                await context.SaveChangesAsync();
+            }
+            return foundAnime;
+        }
     }
 }

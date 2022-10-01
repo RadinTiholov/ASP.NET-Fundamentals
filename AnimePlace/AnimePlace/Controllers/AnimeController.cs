@@ -45,8 +45,15 @@ namespace AnimePlace.Controllers
             }
             else 
             {
-                return RedirectToRoute("/404");
+                return RedirectToAction("Index", "NotFound", new { area = "" });
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Anime anime) 
+        {
+            await animeService.Edit(anime);
+            return RedirectToAction("All");
         }
     }
 }

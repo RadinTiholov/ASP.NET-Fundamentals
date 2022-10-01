@@ -8,5 +8,6 @@ namespace AnimePlace.Core.Contracts
         Task<IEnumerable<Anime>> GetAll();
         Task Add(Anime anime);
         Task<Anime> GetOne(string id);
+        Task<Anime> Edit(Anime anime);
     }
 }
