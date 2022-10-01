@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,6 +36,12 @@ namespace AnimePlace.Core.Services
         {
             await context.Animes.AddAsync(anime);
             await context.SaveChangesAsync();
+        }
+
+        public async Task<Anime> GetOne(string id)
+        {
+            var anime = await context.Animes.FirstOrDefaultAsync(x => x.Id.ToString() == id);
+            return anime;
         }
     }
 }

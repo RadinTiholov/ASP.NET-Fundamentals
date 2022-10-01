@@ -34,5 +34,19 @@ namespace AnimePlace.Controllers
             await animeService.Add(anime);
             return RedirectToAction("All");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            var model = await animeService.GetOne(id);
+            if (model != null)
+            {
+                return View(model);
+            }
+            else 
+            {
+                return RedirectToRoute("/404");
+            }
+        }
     }
 }

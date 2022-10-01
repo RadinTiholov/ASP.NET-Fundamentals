@@ -1,6 +1,7 @@
 ﻿@using AnimePlace.Core.Models
 @model Anime
 @{
+    <h1>Add anime</h1>
     <form asp-action="Add" asp-controller="Anime">
         <div class="form-group">
             <label for="title">Title</label>
@@ -18,6 +19,6 @@
             <label for="trailer">Trailer</label>
             <input type="text" asp-for="Trailer" class="form-control" id="trailer" name="trailer" placeholder="Enter trailer url">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary mt-2">Add</button>
     </form>
 }
