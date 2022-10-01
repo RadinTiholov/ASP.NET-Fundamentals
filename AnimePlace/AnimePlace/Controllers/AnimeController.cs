@@ -1,6 +1,7 @@
 ﻿using AnimePlace.Core.Contracts;
 using AnimePlace.Core.Models;
 using AnimePlace.Core.Services;
+using Microsoft.AspNetCore.Connections.Features;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimePlace.Controllers
@@ -52,8 +53,29 @@ namespace AnimePlace.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Anime anime) 
         {
-            await animeService.Edit(anime);
-            return RedirectToAction("All");
+            var result = await animeService.Edit(anime);
+            if (result != null)
+            {
+                return RedirectToAction("All");
+            }
+            else
+            {
+                return RedirectToAction("Index", "NotFound", new { area = "" });
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(string id) 
+        {
+            var result= await animeService.Delete(id);
+            if (result != null)
+            {
+                return RedirectToAction("All");
+            }
+            else
+            {
+                return RedirectToAction("Index", "NotFound", new { area = "" });
+            }
         }
     }
 }

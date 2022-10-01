@@ -9,5 +9,6 @@ namespace AnimePlace.Core.Contracts
         Task Add(Anime anime);
         Task<Anime> GetOne(string id);
         Task<Anime> Edit(Anime anime);
+        Task<Anime> Delete(string id);
     }
 }

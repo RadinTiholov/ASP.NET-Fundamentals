@@ -8,6 +8,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AnimePlace.Core.Services
 {
@@ -53,6 +54,17 @@ namespace AnimePlace.Core.Services
                 foundAnime.Description = anime.Description;
                 foundAnime.Image = anime.Image;
                 foundAnime.Trailer = anime.Trailer;
+                await context.SaveChangesAsync();
+            }
+            return foundAnime;
+        }
+
+        public async Task<Anime> Delete(string id)
+        {
+            var foundAnime = await context.Animes.FirstOrDefaultAsync(x => x.Id.ToString() == id);
+            if (foundAnime != null)
+            {
+                context.Animes.Remove(foundAnime);
                 await context.SaveChangesAsync();
             }
             return foundAnime;
