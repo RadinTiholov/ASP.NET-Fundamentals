@@ -1,5 +1,6 @@
 ﻿using AnimePlace.Core.Contracts;
 using AnimePlace.Core.Models;
+using AnimePlace.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimePlace.Controllers
@@ -28,9 +29,9 @@ namespace AnimePlace.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Anime anime) 
+        public async Task<IActionResult> Add(Anime anime) 
         {
-            ;
+            await animeService.Add(anime);
             return RedirectToAction("All");
         }
     }

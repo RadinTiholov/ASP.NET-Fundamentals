@@ -19,7 +19,6 @@ namespace AnimePlace.Core.Services
         }
         public async Task<IEnumerable<Anime>> GetAll()
         {
-            context.Database.EnsureCreated();
             var animes = await context.Animes.Select(x => new Anime
             {
                 Id = x.Id,
@@ -29,6 +28,12 @@ namespace AnimePlace.Core.Services
             }).ToListAsync();
 
             return animes;
+        }
+
+        public async Task Add(Anime anime) 
+        {
+            await context.Animes.AddAsync(anime);
+            await context.SaveChangesAsync();
         }
     }
 }
