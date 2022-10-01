@@ -4,5 +4,21 @@
     ViewData["Title"] = "All animes";
 }
 @{
-    <p>@Model.Count()</p>
+    <div class="container">
+        <div class="row">
+        @foreach (var anime in Model)
+            {
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">@anime.Title</h5>
+                            <p class="card-text">@anime.Description</p>
+                            <a href="#" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 }
