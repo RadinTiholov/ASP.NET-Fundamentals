@@ -4,6 +4,6 @@ namespace AnimePlace.Core.Contracts
 {
     public interface IAnimeService
     {
-        IEnumerable<Anime> GetAll();
+        Task<IEnumerable<Anime>> GetAll();
     }
 }

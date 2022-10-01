@@ -17,7 +17,7 @@ namespace AnimePlace.Core.Models
 
         [Required]
         [MinLength(20)]
-        public int Description { get; set; }
+        public string Description { get; set; }
 
         [Required]
         public string Trailer { get; set; }

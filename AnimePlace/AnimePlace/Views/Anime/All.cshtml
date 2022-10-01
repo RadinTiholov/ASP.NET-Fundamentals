@@ -1,2 +1,8 @@
-﻿@{
+﻿@using AnimePlace.Core.Models
+@model IEnumerable<Anime>
+@{
+    ViewData["Title"] = "All animes";
+}
+@{
+    <p>@Model.Count()</p>
 }

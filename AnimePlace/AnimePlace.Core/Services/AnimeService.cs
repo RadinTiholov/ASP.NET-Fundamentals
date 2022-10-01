@@ -17,16 +17,16 @@ namespace AnimePlace.Core.Services
         {
             this.context = context;
         }
-        public IEnumerable<Anime> GetAll()
+        public async Task<IEnumerable<Anime>> GetAll()
         {
             context.Database.EnsureCreated();
-            var animes = context.Animes.Select(x => new Anime
+            var animes = await context.Animes.Select(x => new Anime
             {
                 Id = x.Id,
                 Title = x.Title,
                 Description = x.Description,
                 Trailer = x.Trailer
-            }).ToList();
+            }).ToListAsync();
 
             return animes;
         }
