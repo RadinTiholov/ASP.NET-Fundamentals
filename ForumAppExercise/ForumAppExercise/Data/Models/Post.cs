@@ -5,7 +5,7 @@ namespace ForumAppExercise.Data.Models
 {
     public class Post
     {
-        public Guid Id { get; init; }
+        public int Id { get; init; }
 
         [Required]
         [MaxLength(TitleMaxLength)]
