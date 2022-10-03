@@ -50,5 +50,17 @@ namespace ForumAppExercise.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id) 
+        {
+            var post = dbContext.Posts.Find(id);
+
+            return View(new PostFormModel 
+            {
+                Title = post.Title,
+                Content = post.Content
+            });
+        }
     }
 }
