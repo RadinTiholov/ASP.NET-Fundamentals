@@ -62,5 +62,19 @@ namespace ForumAppExercise.Controllers
                 Content = post.Content
             });
         }
+        [HttpPost]
+        public IActionResult Edit(int id, PostFormModel model) 
+        {
+            var post = dbContext.Posts.Find(id);
+            if (post != null) 
+            {
+                post.Title = model.Title;
+                post.Content = model.Content;
+                dbContext.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
