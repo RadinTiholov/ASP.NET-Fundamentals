@@ -76,5 +76,16 @@ namespace ForumAppExercise.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public IActionResult Delete(int id) 
+        {
+            var post = dbContext.Posts.Find(id);
+
+            dbContext.Posts.Remove(post);
+            dbContext.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
