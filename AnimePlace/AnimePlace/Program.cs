@@ -3,6 +3,7 @@ using AnimePlace.Core.Services;
 using AnimePlace.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<AnimePlaceDbContext>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IAnimeService, AnimeService>();
+builder.Services.AddHttpClient("AnimeApi", httpClient =>
+{
+    httpClient.BaseAddress = new Uri("https://gogoanime.herokuapp.com/");
+    httpClient.DefaultRequestHeaders.Add(
+        HeaderNames.Accept, "application/json");
+});
 
 var app = builder.Build();
 

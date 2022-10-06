@@ -1,24 +1,43 @@
 ﻿using AnimePlace.Core.Contracts;
 using AnimePlace.Core.Models;
 using AnimePlace.Core.Services;
+using AnimePlace.Models;
 using Microsoft.AspNetCore.Connections.Features;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using System.Text.Json;
 
 namespace AnimePlace.Controllers
 {
     public class AnimeController: Controller
     {
         private readonly IAnimeService animeService;
+        private readonly IHttpClientFactory httpClientFactory;
 
-        public AnimeController(IAnimeService _animeService)
+        public IEnumerable<RecentAnime>? RecentAnimes { get; set; }
+        public AnimeController(IAnimeService _animeService, IHttpClientFactory httpClientFactory)
         {
             this.animeService = _animeService;
+            this.httpClientFactory = httpClientFactory;
         }
 
         [HttpGet]
         public async Task<IActionResult> All() 
         {
             var animes = await animeService.GetAll();
+
+            //Getting recent animes from api;
+            var httpClient = httpClientFactory.CreateClient("AnimeApi");
+            var httpResponseMessage = await httpClient.GetAsync("recent-release");
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                using var contentStream =
+                    await httpResponseMessage.Content.ReadAsStreamAsync();
+
+                RecentAnimes = await JsonSerializer.DeserializeAsync
+                    <IEnumerable<RecentAnime>>(contentStream);
+            }
+
             return View(animes);
         }
 
