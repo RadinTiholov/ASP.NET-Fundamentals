@@ -1,11 +1,12 @@
 ﻿using AnimePlace.Core.Models;
+using AnimePlace.Core.Models.Account;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 
 namespace AnimePlace.Data
 {
-    public class AnimePlaceDbContext : IdentityDbContext
+    public class AnimePlaceDbContext : IdentityDbContext<ApplicationUser>
     {
         public AnimePlaceDbContext(DbContextOptions<AnimePlaceDbContext> options)
             : base(options)
