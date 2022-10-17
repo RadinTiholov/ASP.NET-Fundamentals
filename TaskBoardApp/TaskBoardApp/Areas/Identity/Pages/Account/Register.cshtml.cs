@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using TaskBoardApp.Data.Entities;
 using static TaskBoardApp.Data.DataConstants.User;
+using Task = System.Threading.Tasks.Task;
 
 namespace TaskBoardApp.Areas.Identity.Pages.Account
 {
@@ -88,7 +89,7 @@ namespace TaskBoardApp.Areas.Identity.Pages.Account
         }
 
 
-        public void OnGetAsync(string returnUrl = null)
+        public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
         }
