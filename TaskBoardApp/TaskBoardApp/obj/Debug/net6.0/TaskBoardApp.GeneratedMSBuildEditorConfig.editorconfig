@@ -35,6 +35,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Boards/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9hcmRzXEFsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -47,8 +51,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Shared/_TaskPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UYXNrUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Tasks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Tasks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Tasks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/Tasks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SoftUni/ASP.NET Fundamentals/ASP.NET-Fundamentals/TaskBoardApp/TaskBoardApp/Views/_ViewImports.cshtml]
