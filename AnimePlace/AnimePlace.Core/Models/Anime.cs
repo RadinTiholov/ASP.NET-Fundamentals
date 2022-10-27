@@ -20,6 +20,10 @@ namespace AnimePlace.Core.Models
         public string Description { get; set; }
 
         [Required]
+        [Range(typeof(decimal), "0.0", "10", ConvertValueInInvariantCulture = true)]
+        public decimal Seasons { get; set; }
+
+        [Required]
         public string Trailer { get; set; }
 
         [Required]

@@ -27,6 +27,7 @@ namespace AnimePlace.Core.Services
                 Title = x.Title,
                 Description = x.Description,
                 Trailer = x.Trailer,
+                Seasons = x.Seasons,
                 Image = x.Image
             }).ToListAsync();
 
@@ -54,6 +55,7 @@ namespace AnimePlace.Core.Services
                 foundAnime.Description = anime.Description;
                 foundAnime.Image = anime.Image;
                 foundAnime.Trailer = anime.Trailer;
+                foundAnime.Seasons = anime.Seasons;
                 await context.SaveChangesAsync();
             }
             return foundAnime;

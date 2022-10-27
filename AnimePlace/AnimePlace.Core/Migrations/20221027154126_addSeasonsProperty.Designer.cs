@@ -4,6 +4,7 @@ using AnimePlace.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimePlace.Core.Migrations
 {
     [DbContext(typeof(AnimePlaceDbContext))]
-    partial class AnimePlaceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221027154126_addSeasonsProperty")]
+    partial class addSeasonsProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,8 +111,8 @@ namespace AnimePlace.Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Seasons")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("Seasons")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
