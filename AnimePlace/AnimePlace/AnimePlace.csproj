@@ -22,8 +22,4 @@
     <ProjectReference Include="..\AnimePlace.Core\AnimePlace.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ModelBinders\" />
-  </ItemGroup>
-
 </Project>

@@ -2,6 +2,7 @@ using AnimePlace.Core.Contracts;
 using AnimePlace.Core.Models.Account;
 using AnimePlace.Core.Services;
 using AnimePlace.Data;
+using AnimePlace.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
@@ -25,6 +26,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
     options.Password.RequireDigit = false;
+    options.Password.RequireDigit = false;
 
 })
     .AddEntityFrameworkStores<AnimePlaceDbContext>();
@@ -41,6 +43,11 @@ builder.Services.AddHttpClient("AnimeApi", httpClient =>
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Account/Login";
+});
+
+builder.Services.AddControllers().AddMvcOptions(options =>
+{
+    options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
 });
 
 var app = builder.Build();
